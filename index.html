@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+    <style>
+    
+    </style>
+  </head>
+ 
+
+  <body>
+    <div id="root"></div>
+    <!-- <div class="editable-cell" contenteditable="true">Cell 1</div>
+<div class="editable-cell" contenteditable="true">Cell 2</div>
+<div class="editable-cell" contenteditable="true">Cell 3</div> -->
+<!-- <script>
+  // Get all elements with the class 'editable-cell'
+  const cells = document.querySelectorAll('.editable-cell');
+
+  // Add event listener for keydown on each cell
+  cells.forEach((cell, index) => {
+      cell.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter') {
+              event.preventDefault(); // Prevent default Enter behavior (newline)
+              
+              // Determine if Shift key is pressed to decide whether to move to the previous or next cell
+              const direction = event.shiftKey ? -1 : 1;
+
+              // Calculate the index of the next cell
+              const nextIndex = (index + direction + cells.length) % cells.length;
+
+              // Focus on the next cell and start editing
+              cells[nextIndex].focus();
+          }
+      });
+  });
+</script> -->
+    <script type="module" src="/src/main.jsx"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
