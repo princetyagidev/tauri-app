@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import CustomEditTable from "./components/CustomEditTable";
-
+import { checkUpdate, installUpdate } from '@tauri-apps/api/updater';
 import { getName ,getVersion  } from '@tauri-apps/api/app';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -29,6 +29,15 @@ function App() {
       autoClose:false
     })
   }
+  useEffect(() => {
+    checkUpdate().then(({ shouldUpdate, manifest }) => {
+      if (shouldUpdate) {
+        const { version: newVersion, body: releaseNotes } = manifest;
+        console.log(newVersion);
+       
+      }
+    });
+  }, []);
 
 
 
