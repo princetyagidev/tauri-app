@@ -4,7 +4,7 @@ import { confirm } from '@tauri-apps/api/dialog';
 const CustomEditTable = () => {
   const [tableData, setTableData] = useState([
     {
-      name: "Aurelia Vega",
+      name: "Aurelia Vega Prince",
       age: "30",
       companyName: "Deepends",
       country: "Spain",

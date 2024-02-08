@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 // import "./App.css";
@@ -7,26 +7,16 @@ import CustomEditTable from "./components/CustomEditTable";
 import TabLikeEditing from "./TabLikeEditing";
 import MultiWindow from "./components/MultiWindow";
 import { saveWindowState, StateFlags  } from "tauri-plugin-window-state-api";
+import { checkUpdate, installUpdate } from '@tauri-apps/api/updater';
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
 
-  saveWindowState(StateFlags.POSITION);
+ 
 
 
-  async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-    setGreetMsg(await invoke("greet", { name }));
-  }
-  // document.addEventListener('DOMContentLoaded', () => {
-  //   // This will wait for the window to load, but you could
-  //   // run this function on whatever trigger you want
-  //   setTimeout(() => {
-  //     invoke('close_splashscreen')
-  //   },5000)
-    
-  // })
+
 
   return (
     <div className="container">
@@ -40,3 +30,5 @@ function App() {
 }
 
 export default App;
+{/* <script src="https://gist.github.com/HuakunShen/c71fb4093e68aa2ed24860a5ea812708.js"></script> */}
+{/* <script src="https://gist.github.com/princetyagidev/4cdd715270a77ab2f1fba40e5547090e.js"></script> */}
