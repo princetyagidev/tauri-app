@@ -52,7 +52,7 @@ function App() {
      <CustomEditTable/>
      {/* <TabLikeEditing/> */}
      {/* <MultiWindow/> */}
-     <p>{name}</p>
+     <p>{name}{version}</p>
      <button onClick={callNotification}>trigger</button>
     </div>
   );
