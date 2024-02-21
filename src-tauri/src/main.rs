@@ -121,11 +121,3 @@ fn main() {
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
-// https://github.com/Bin-Huang/chatbox
-
-
-
-// "https://gist.githubusercontent.com/Bin-Huang/cf0b7684e28b30d760ba02417bbac916/raw/chatbox.releases.json",
-
-// <script src="https://gist.github.com/princetyagidev/8b39c7f3bfeeb79aa9762d1c589cdffe.js"></script>
-// <script src="https://gist.github.com/princetyagidev/4cdd715270a77ab2f1fba40e5547090e.js"></script>

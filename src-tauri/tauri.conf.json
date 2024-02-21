@@ -1,15 +1,56 @@
 {
+  "package": {
+    "productName": "novus",
+    "version": "../package.json"
+  },
   "build": {
     "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run build",
     "devPath": "http://localhost:1420",
-    "distDir": "../dist"
+    "distDir": "../dist",
+    "withGlobalTauri": false
   },
-  "package": {
-    "productName": "novus",
-    "version": "1.0.0"
-  },
+  
   "tauri": {
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.example.myapp",
+      "publisher": "Unknown Publisher",
+      "copyright": "Copyright Notice",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "resources": [],
+      "externalBin": [],
+      "category": "DeveloperTool",
+      "shortDescription": "",
+      "longDescription": "",
+      "deb": {
+        "depends": []
+      },
+      "macOS": {
+        "frameworks": [],
+        "minimumSystemVersion": "",
+        "exceptionDomain": "",
+        "signingIdentity": null,
+        "entitlements": null
+      }, 
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    
     "allowlist": {
       "all": true,
       "shell": {
@@ -41,25 +82,23 @@
         "all": false,
         "hide": false,
         "show": false
+      },
+      "process": {
+        "all": true,
+        "exit": true,
+        "relaunch": true,
+        "relaunchDangerousAllowSymlinkMacos": true
+      },
+      "http": {
+        "all": true,
+        "request": true,
+        "scope": []
       }
+
      
     },
-    "systemTray": {
-      "iconPath": "icons/icon.png",
-      "iconAsTemplate": true
-    },
-    "bundle": {
-      "active": true,
-      "targets": "all",
-      "identifier": "com.example.myapp",
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ]
-    },
+    
+    
     "security": {
       "csp": null
     },
@@ -98,10 +137,11 @@
       "active": true,
       "endpoints": [
         "https://gist.github.com/princetyagidev/4cdd715270a77ab2f1fba40e5547090e/raw"
-       
+        
       ],
       "dialog": true,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDIwNjA2RjNEMkQ5RUFCNzgKUldSNHE1NHRQVzlnSUE1NFRmcW1DWUNEWVp1Zzg1VlpWY09nNnIva25lZ205RFBlWURpQ1ZQbmYK"
     }
+    
   }
 }
